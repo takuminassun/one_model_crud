@@ -1,0 +1,10 @@
+.container
+  h1.mt-4 新規登録
+  = form_with url: posts_path do |form|
+    .form-group
+      = form.label :title, 'タイトル'
+      = form.text_field :title, class: 'form-control'
+    .form-group
+      = form.label :content, '内容'
+      = form.text_area :content, class: 'form-control'
+    = form.submit '登録', class: 'btn btn-primary'
